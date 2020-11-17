@@ -1,12 +1,18 @@
 class Airport {
-  constructor(name){
+  constructor(name, weather){
     this.name = name;
+    this.weather = weather;
     this.hanger = [];
+    this.capacity = 10;
   }
 
   land(plane) {
-    this.hanger.push(plane);
-    return `${plane.name} is in the hanger`;
+    if (this.hanger.length === this.capacity) {
+      return "Denied, hanger full"
+    } else {
+      this.hanger.push(plane);
+      return `${plane.name} is in the hanger`;
+    };
   };
 
   take_off(plane) {
