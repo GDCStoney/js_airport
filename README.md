@@ -6,11 +6,16 @@ This is the JavaScript attempt at the Airport Challenge. The main parts are:
   - the JavaScript module for the Plane class
     - land()
     - take_off(destination airport)
+    - weather_stormy(location/destination)
 
 - airport.js
   - the JavaScript module for the Airport class
     - land(plane)
     - take_off(plane)
+
+- weather.js
+  - the JavaScript module to randomise the weather
+    - look()
 
 - feature.test.js
   - the feature testing file, basically runs a number of scenarios
@@ -25,6 +30,4 @@ fork the repository, then run the feature tests from the root directory
 
 
 ### Next steps
-- introduce edge checking (airport full, airport doesn't have plane)
-- introduce weather (stormy prevents land/take_off)
-- visual (HTML) dashboard showing status of objects? 
+- visual (HTML) dashboard showing status of objects?
