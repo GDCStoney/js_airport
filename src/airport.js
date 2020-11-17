@@ -15,7 +15,7 @@ class Airport {
     };
   };
 
-  take_off(plane) {
+  takeOff(plane) {
     const index = this.hanger.indexOf(plane);
     if (index >- 1) {
       this.hanger.splice(index, 1);

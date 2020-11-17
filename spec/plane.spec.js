@@ -14,6 +14,6 @@ describe("Plane", function () {
 
     spyOn(airport01.weather, "look").and.returnValue('Stormy');
 
-    expect(plane.take_off(airport02)).toContain('Weather is Stormy');
+    expect(plane.takeOff(airport02)).toContain('Weather is Stormy');
   });
 });

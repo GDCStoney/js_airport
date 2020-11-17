@@ -6,7 +6,7 @@ This is the JavaScript attempt at the Airport Challenge. The main parts are:
   - the JavaScript module for the Plane class
     - land()
     - take_off(destination airport)
-    - weather_stormy(location/destination)
+    - isWeatherStormy(location/destination)
 
 - airport.js
   - the JavaScript module for the Airport class
