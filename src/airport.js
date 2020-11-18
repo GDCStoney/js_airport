@@ -25,7 +25,11 @@ class Airport {
 
   isItStormy() {
     return this.weather.look() === 'Stormy';
-  }
+  };
+
+  isHangerFull() {
+    return this.hanger.length === this.capacity;
+  };
 };
 
 module.exports = Airport;

@@ -10,7 +10,7 @@ class Plane {
     const request_to_land = this.destination.land(this);
     if (this.location != "In Air") {
       return "Can't land, if already on the ground.";
-    } else if (request_to_land.indexOf('Denied') != -1) {
+    } else if (this.destination.isHangerFull()) {
       return `${this.destination.name} airport is full, sorry`;
     } else if (this.destination.isItStormy()) {
       return 'Weather is Stormy, landing aborted.';
