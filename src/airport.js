@@ -22,6 +22,10 @@ class Airport {
     }
     return `${plane.name} has left the hanger`;
   };
+
+  isItStormy() {
+    return this.weather.look() === 'Stormy';
+  }
 };
 
 module.exports = Airport;

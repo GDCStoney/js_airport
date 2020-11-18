@@ -6,12 +6,12 @@ This is the JavaScript attempt at the Airport Challenge. The main parts are:
   - the JavaScript module for the Plane class
     - land()
     - takeOff(destination airport)
-    - isWeatherStormy(location/destination)
 
 - airport.js
   - the JavaScript module for the Airport class
     - land(plane)
     - takeOff(plane)
+    isItStormy()
 
 - weather.js
   - the JavaScript module to randomise the weather

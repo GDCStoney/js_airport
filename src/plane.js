@@ -12,7 +12,7 @@ class Plane {
       return "Can't land, if already on the ground.";
     } else if (request_to_land.indexOf('Denied') != -1) {
       return `${this.destination.name} airport is full, sorry`;
-    } else if (this.isWeatherStormy(this.destination)) {
+    } else if (this.destination.isItStormy()) {
       return 'Weather is Stormy, landing aborted.';
     } else {
       this.location = this.destination;
@@ -26,7 +26,7 @@ class Plane {
       return 'Invalid destination, take off aborted.'
     } else if (this.location === "In Air") {
       return "Can't take off, whilst in flight";
-    } else if (this.isWeatherStormy(this.location)) {
+    } else if (this.location.isItStormy()) {
       return 'Weather is Stormy, take off aborted.'
     } else {
       this.location.takeOff(this);
@@ -34,10 +34,6 @@ class Plane {
       this.location = 'In Air';
       return `${this.name} has taken off, flying to ${this.destination.name}`;
     };
-  };
-
-  isWeatherStormy(location) {
-    return location.weather.look() === 'Stormy';
   };
 };
 
